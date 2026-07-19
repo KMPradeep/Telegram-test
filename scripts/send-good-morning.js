@@ -15,7 +15,7 @@ const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`,
 const result = await response.json();
 
 if (!response.ok || !result.ok) {
-  console.error("Failed to send Telegram message:", result);
+  console.error(`Failed to send Telegram message to chat_id "${chatId}":`, result);
   process.exit(1);
 }
 
